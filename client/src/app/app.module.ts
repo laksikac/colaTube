@@ -3,7 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {AccordionModule} from 'primeng/accordion';     
+import {AccordionModule} from 'primeng/accordion'; 
+
+import {ButtonModule} from 'primeng/button';
+
+import {DataViewModule} from 'primeng/dataview';
 
 
 
@@ -14,7 +18,9 @@ import {AccordionModule} from 'primeng/accordion';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AccordionModule
+    AccordionModule,
+    ButtonModule,
+    DataViewModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
