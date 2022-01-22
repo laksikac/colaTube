@@ -9,8 +9,8 @@ import {ButtonModule} from 'primeng/button';
 
 import {DataViewModule} from 'primeng/dataview';
 
+import { HttpClientModule } from '@angular/common/http';
 
-import {DataViewModule} from 'primeng/dataview';
 
 
 @NgModule({
@@ -21,12 +21,9 @@ import {DataViewModule} from 'primeng/dataview';
     BrowserModule,
     AppRoutingModule,
     AccordionModule,
-<<<<<<< HEAD
-    DataViewModule
-=======
     ButtonModule,
     DataViewModule,
->>>>>>> 8b339584514160063156904d7e28f19bfa4f6fa1
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
