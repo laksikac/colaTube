@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import {AccordionModule} from 'primeng/accordion';     
 
 
+import {DataViewModule} from 'primeng/dataview';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import {AccordionModule} from 'primeng/accordion';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AccordionModule
+    AccordionModule,
+    DataViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]
