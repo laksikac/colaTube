@@ -1,0 +1,7 @@
+<div class="dock-window dock-advanced">
+    <p-dock [model]="dockItems" position="bottom">
+        <ng-template pTemplate="item" let-item>
+            <img [src]="item.icon" [alt]="item.label" width="50%" height="50%">
+        </ng-template>
+    </p-dock>
+</div>
