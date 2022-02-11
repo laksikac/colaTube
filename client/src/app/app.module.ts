@@ -23,7 +23,6 @@ import {DockModule} from 'primeng/dock';
   declarations: [
     AppComponent,
     BottomMenuComponent
-
   ],
   imports: [
     BrowserModule,
