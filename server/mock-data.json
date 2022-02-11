@@ -1,0 +1,37 @@
+[{
+        "model": "database.Clip",
+        "pk": 1,
+        "fields": {
+            "title": "colaaaaa",
+            "uploader": "nuch",
+            "description": "no more...",
+            "rating": 2,
+            "url": "https://www.youtube.com/watch?v=TRrVrSznG7Y&list=RDEMkN_48IFoLz4HZErC5tAF_A&start_radio=1",
+            "date": "2022-01-22T07:47:22.213079+07:00"
+        }
+    },
+    {
+        "model": "database.Clip",
+        "pk": 2,
+        "fields": {
+            "title": "tube",
+            "uploader": "v",
+            "description": "y",
+            "rating": 1,
+            "url": "https://www.youtube.com/watch?v=TRrVrSznG7Y&list=RDEMkN_48IFoLz4HZErC5tAF_A&start_radio=1",
+            "date": "2022-01-22T19:45:50.894726+07:00"
+        }
+    },
+    {
+        "model": "database.Clip",
+        "pk": 3,
+        "fields": {
+            "title": "colatube",
+            "uploader": "vaa",
+            "description": "xy",
+            "rating": 1,
+            "url": "https://www.youtube.com/watch?v=TRrVrSznG7Y&list=RDEMkN_48IFoLz4HZErC5tAF_A&start_radio=1",
+            "date": "2022-01-22T19:45:50.894726+07:00"
+        }
+    }
+]

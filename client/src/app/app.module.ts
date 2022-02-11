@@ -11,11 +11,18 @@ import {DataViewModule} from 'primeng/dataview';
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { BottomMenuComponent } from './bottom-menu/bottom-menu.component';
+
+
+import {DockModule} from 'primeng/dock';
+
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BottomMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     ButtonModule,
     DataViewModule,
     HttpClientModule,
+    DockModule
   ],
   providers: [],
   bootstrap: [AppComponent]
