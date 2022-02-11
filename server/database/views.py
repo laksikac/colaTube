@@ -24,7 +24,7 @@ class CilpViewSet(viewsets.ModelViewSet):
     @action(detail=False, methods=['GET'])
     def search(self, request, *args, **kwargs):
 
-        search_post = request.GET.get('_key')
+        search_post = request.GET.get('_search')
 
         if search_post or search_post == '':
             try:
