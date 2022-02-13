@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -16,13 +17,23 @@ import { BottomMenuComponent } from './bottom-menu/bottom-menu.component';
 
 import {DockModule} from 'primeng/dock';
 
+import {TopMenuComponent} from './top-menu/top-menu.component';
+
+import {MenubarModule} from 'primeng/menubar';
+
+import {InputTextModule} from 'primeng/inputtext';
+
+import {CarouselModule} from 'primeng/carousel';
+import { SliderComponent } from './slider/slider.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BottomMenuComponent
+    BottomMenuComponent,
+    TopMenuComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +42,10 @@ import {DockModule} from 'primeng/dock';
     ButtonModule,
     DataViewModule,
     HttpClientModule,
-    DockModule
+    DockModule,
+    MenubarModule,
+    InputTextModule,
+    CarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
