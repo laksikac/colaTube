@@ -7,8 +7,8 @@
             <i class="pi pi-search"></i>
             <input type="text" pInputText placeholder="ค้นหา" />
         </span> &nbsp;
-        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" (click)="showBasicDialog()"></button> &nbsp;
-        <button pButton pRipple type="button" icon="pi pi-user" class="p-button-rounded p-button-info p-button-text"></button>
+        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" (click)="showBasicDialog()" pTooltip="เพิ่มคลิป" tooltipPosition="bottom"></button> &nbsp;
+        <button pButton pRipple type="button" icon="pi pi-user" class="p-button-rounded p-button-info p-button-text" pTooltip="โปรไฟล์" tooltipPosition="bottom"></button>
     </ng-template>
 </p-menubar>
 
@@ -16,7 +16,6 @@
 
 <p-dialog header="เพิ่มคลิป" [(visible)]="displayBasic" [modal]="true" [style]="{width: '50vw'}" [draggable]="false" [resizable]="false">
     <app-add-clip></app-add-clip>
-
     <ng-template pTemplate="footer">
         <p-button icon="pi pi-check" (click)="displayBasic=false" label="ตกลง" styleClass="p-button-text"></p-button>
     </ng-template>
