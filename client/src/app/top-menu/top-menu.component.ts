@@ -11,11 +11,14 @@ export class TopMenuComponent implements OnInit {
 
   items: MenuItem[] = [];
 
+  displayBasic: boolean = false;
+
+  showBasicDialog() {
+    this.displayBasic = true;
+  }
+
   constructor() { }
 
-  click(){
-    alert("hi");
-  }
 
   ngOnInit(): void {
     this.items = [

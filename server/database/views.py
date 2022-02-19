@@ -15,6 +15,7 @@ from django.db.models import Q
 
 
 
+
 # Create your views here.
 class CilpViewSet(viewsets.ModelViewSet):
 
@@ -101,8 +102,8 @@ def ClipApi(request,id=0):
             clip_serializer = ClipSerializer(data=clip_data)
             if clip_serializer.is_valid():
                 clip_serializer.save()
-                return JsonResponse("Added Successfully!!" , safe=False)
-            return JsonResponse("Failed to Add.",safe=False)
+                return JsonResponse("เพิ่มสำเร็จ!!" , safe=False)
+            return JsonResponse("เกิดข้อผิดพลาดในการเพิ่ม",safe=False)
         
         elif request.method=='PUT':
             clip_data = JSONParser().parse(request)
@@ -110,10 +111,10 @@ def ClipApi(request,id=0):
             clip_serializer=ClipSerializer(clip,data=clip_data)
             if clip_serializer.is_valid():
                 clip_serializer.save()
-                return JsonResponse("Updated Successfully!!", safe=False)
-            return JsonResponse("Failed to Update.", safe=False)
+                return JsonResponse("อัพเดทสำเร็จ", safe=False)
+            return JsonResponse("เกิดข้อผิดพลาดในการอัพเดท", safe=False)
 
         elif request.method=='DELETE':
             clip=Clip.objects.get(id=id)
             Clip.delete()
-            return JsonResponse("Deleted Succeffully!!", safe=False)
+            return JsonResponse("ลบสำเร็จ!!", safe=False)

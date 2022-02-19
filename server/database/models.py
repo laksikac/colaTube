@@ -7,6 +7,7 @@ from django.db import models
 
 
 
+
 class Clip(models.Model):
     title = models.CharField(max_length=200)
     uploader = models.CharField(max_length=200)
