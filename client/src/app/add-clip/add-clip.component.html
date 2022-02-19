@@ -1,0 +1,35 @@
+<br>
+<br>
+<div class="p-fluid grid">
+    <div class="field col-12 md:col-4">
+        <span class="p-float-label">
+            <input type="text" id="inputtext" pInputText [(ngModel)]="title"> 
+            <label for="inputtext">ชื่อคลิป</label>
+        </span>
+    </div>
+    <br>
+    <div class="field col-12 md:col-4">
+        <span class="p-float-label">
+            <input type="text" id="inputtext" pInputText [(ngModel)]="uploader"> 
+            <label for="inputtext">ชื่อผู้อัพโหลด</label>
+        </span>
+    </div>
+    <br>
+    <div class="field col-12 md:col-4">
+        <span class="p-float-label">
+            <input type="text" id="inputtext" pInputText [(ngModel)]="url"> 
+            <label for="inputtext">Url ของคลิป</label>
+        </span>
+    </div>
+    <br>
+    <div class="field col-12 md:col-4">
+        <span class="p-float-label">
+            <textarea inputId="textarea" rows="3" style="resize: none;" cols="30" [(ngModel)]="description" pInputTextarea></textarea>
+            <label for="textarea">คำบรรยาย</label>
+        </span>
+    </div>
+</div>
+<p>ความนิยม: {{rating}}/5</p>
+<p-rating [(ngModel)]="rating" [cancel]="false"></p-rating>
+
+<p-button icon="pi pi-check" (click)="addClip()" label="ตกลง" styleClass="p-button-text"></p-button>
