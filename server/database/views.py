@@ -14,7 +14,7 @@ from django.http.response import Http404
 from django.db.models import Q
 # Create your views here.
 from rest_framework import filters
-
+from rest_framework import status
 
 class ClipViewSet(viewsets.ModelViewSet):
     queryset = Clip.objects.all()
@@ -39,7 +39,7 @@ def ClipApi(request,id=0):
             if clip_serializer.is_valid():
                 clip_serializer.save()
                 return JsonResponse("เพิ่มสำเร็จ!!" , safe=False)
-            return JsonResponse("เกิดข้อผิดพลาดในการเพิ่ม",safe=False)
+            return JsonResponse("HTTP_501_NOT_IMPLEMENTED",safe=False)
         
         elif request.method=='PUT':
             clip_data = JSONParser().parse(request)
@@ -47,10 +47,10 @@ def ClipApi(request,id=0):
             clip_serializer=ClipSerializer(clip,data=clip_data)
             if clip_serializer.is_valid():
                 clip_serializer.save()
-                return JsonResponse("อัพเดทสำเร็จ", safe=False)
+                return JsonResponse(clip_serializer.data, safe=False)
             return JsonResponse("เกิดข้อผิดพลาดในการอัพเดท", safe=False)
 
         elif request.method=='DELETE':
             clip=Clip.objects.get(id=id)
-            Clip.delete()
-            return JsonResponse("ลบสำเร็จ!!", safe=False)
+            clip.delete()
+            return JsonResponse("ลบแล้วจ้า", safe=False)
