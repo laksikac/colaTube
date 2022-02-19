@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ClipApiService } from '../clip-api.service';
+import { TopMenuComponent } from '../top-menu/top-menu.component'
 
 @Component({
   selector: 'app-add-clip',
@@ -15,7 +16,7 @@ export class AddClipComponent implements OnInit {
   rating: number = 0;
 
 
-  constructor(private clipApiService:ClipApiService ) { }
+  constructor(private clipApiService:ClipApiService, private top:TopMenuComponent ) { }
 
   ngOnInit(): void {
   }
@@ -29,6 +30,8 @@ export class AddClipComponent implements OnInit {
       url: this.url,
       rating: this.rating,
     }
+
+    this.top.hideBasicDialog()
     
     this.clipApiService.addClip(val).subscribe(res => {
       alert(res.toString());

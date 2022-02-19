@@ -16,7 +16,4 @@
 
 <p-dialog header="เพิ่มคลิป" [(visible)]="displayBasic" [modal]="true" [style]="{width: '50vw'}" [draggable]="false" [resizable]="false">
     <app-add-clip></app-add-clip>
-    <ng-template pTemplate="footer">
-        <p-button icon="pi pi-check" (click)="displayBasic=false" label="ตกลง" styleClass="p-button-text"></p-button>
-    </ng-template>
 </p-dialog>

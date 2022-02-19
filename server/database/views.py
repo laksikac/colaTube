@@ -116,5 +116,5 @@ def ClipApi(request,id=0):
 
         elif request.method=='DELETE':
             clip=Clip.objects.get(id=id)
-            Clip.delete()
+            clip.delete()
             return JsonResponse("ลบสำเร็จ!!", safe=False)
