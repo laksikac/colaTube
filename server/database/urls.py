@@ -7,7 +7,7 @@ from database import views
 
 
 router = DefaultRouter()
-router.register(r'database', views.CilpViewSet)
+router.register(r'database', views.ClipViewSet)
 
 
 

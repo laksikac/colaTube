@@ -2,6 +2,7 @@
 import datetime
 from re import T
 from django.db import models
+import django_filters
 
 
 
@@ -17,10 +18,10 @@ class Clip(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return self.title
-   
-   
-    
 
+
+
+   
 
 class Tag(models.Model):
     clip = models.ForeignKey(Clip, on_delete=models.CASCADE)
