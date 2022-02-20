@@ -102,7 +102,7 @@ def ClipApi(request,id=0):
             clip_serializer = ClipSerializer(data=clip_data)
             if clip_serializer.is_valid():
                 clip_serializer.save()
-                return JsonResponse("เพิ่มสำเร็จ!!" , safe=False)
+                return JsonResponse(clip_serializer.data , safe=False)
             return JsonResponse("เกิดข้อผิดพลาดในการเพิ่ม",safe=False)
         
         elif request.method=='PUT':
@@ -111,7 +111,7 @@ def ClipApi(request,id=0):
             clip_serializer=ClipSerializer(clip,data=clip_data)
             if clip_serializer.is_valid():
                 clip_serializer.save()
-                return JsonResponse("อัพเดทสำเร็จ", safe=False)
+                return JsonResponse(clip_serializer.data, safe=False)
             return JsonResponse("เกิดข้อผิดพลาดในการอัพเดท", safe=False)
 
         elif request.method=='DELETE':
