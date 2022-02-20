@@ -17,6 +17,10 @@ export class TopMenuComponent implements OnInit {
     this.displayBasic = true;
   }
 
+  hideBasicDialog() {
+    this.displayBasic = false;
+  }
+
   constructor() { }
 
 
