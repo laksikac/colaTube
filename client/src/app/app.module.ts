@@ -39,7 +39,8 @@ import {RatingModule} from 'primeng/rating';
 
 import {ToastModule} from 'primeng/toast';
 
-
+import {YouTubePlayerModule} from '@angular/youtube-player';
+import { VideoPlayerComponent } from './video-player/video-player.component';
 
 
 
@@ -50,7 +51,8 @@ import {ToastModule} from 'primeng/toast';
     BottomMenuComponent,
     TopMenuComponent,
     SliderComponent,
-    AddClipComponent
+    AddClipComponent,
+    VideoPlayerComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +70,8 @@ import {ToastModule} from 'primeng/toast';
     FormsModule,
     InputTextareaModule,
     RatingModule,
-    ToastModule
+    ToastModule,
+    YouTubePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

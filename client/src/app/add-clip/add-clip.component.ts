@@ -23,6 +23,7 @@ export class AddClipComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
     
   }
 
@@ -54,12 +55,12 @@ export class AddClipComponent implements OnInit {
         this.resetAdd();
       } else {
         this.top.showWarn();
+        this.resetAdd();
       }
     
     });
 
     
   }
-
 
 }

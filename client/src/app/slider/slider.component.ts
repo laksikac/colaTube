@@ -17,6 +17,8 @@ export class SliderComponent implements OnInit {
       this.clipApiService.getClips()
       .subscribe(clips => this.clips = clips)
   }
+
+  test:string = "hello";
   
   
 
@@ -47,6 +49,13 @@ export class SliderComponent implements OnInit {
   ngOnInit(): void {
 
     this.getClips();
+  }
+
+  
+  UrlVideo(video: string) {
+    const params = new URL(video).searchParams;
+    video  = params.get('v')|| '{}';
+    return video;
   }
 
 }
