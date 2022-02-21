@@ -36,6 +36,7 @@ import { AddClipComponent } from './add-clip/add-clip.component';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 
 import {RatingModule} from 'primeng/rating';
+import { ClipsComponent } from './clips/clips.component';
 
 
 
@@ -45,7 +46,8 @@ import {RatingModule} from 'primeng/rating';
     BottomMenuComponent,
     TopMenuComponent,
     SliderComponent,
-    AddClipComponent
+    AddClipComponent,
+    ClipsComponent
   ],
   imports: [
     BrowserModule,
