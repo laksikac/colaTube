@@ -33,8 +33,8 @@ def ClipApi(request,id=0):
             clip_serializer = ClipSerializer(data=clip_data)
             if clip_serializer.is_valid():
                 clip_serializer.save()
-                return JsonResponse(clip_serializer.data , safe=False)
-            return JsonResponse("เกิดข้อผิดพลาดในการเพิ่ม",safe=False)
+                return JsonResponse(1 , safe=False)
+            return JsonResponse(0,safe=False)
         
         elif request.method=='PUT':
             clip_data = JSONParser().parse(request)

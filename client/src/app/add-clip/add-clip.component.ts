@@ -51,11 +51,10 @@ export class AddClipComponent implements OnInit {
     
     this.clipApiService.addClip(val).subscribe(res => {
       if(res == 1) {
-        this.top.showSuccess();
         this.resetAdd();
+        this.top.showSuccess();
       } else {
         this.top.showWarn();
-        this.resetAdd();
       }
     
     });
