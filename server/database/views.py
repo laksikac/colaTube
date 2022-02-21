@@ -1,5 +1,4 @@
 
-from cgitb import lookup
 from database.serializers import ClipSerializer
 from database.models import Clip
 from rest_framework import viewsets
@@ -8,13 +7,9 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http.response import JsonResponse
 from rest_framework.parsers import JSONParser
 
-from rest_framework.decorators import action
-from rest_framework.response import Response
-from django.http.response import Http404
-from django.db.models import Q
 # Create your views here.
 from rest_framework import filters
-from rest_framework import status
+
 
 class ClipViewSet(viewsets.ModelViewSet):
     queryset = Clip.objects.all()

@@ -1,3 +1,20 @@
-<iframe width="500" height="500" src="https://www.youtube.com/embed/8jfa_0Lig-A">
-<!-- เติม embed/ แทน watch -->
-</iframe>
+<p-carousel [value]="clips" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
+    <ng-template pTemplate="header">
+        <h1>คลิปแนะนำ</h1>
+    </ng-template>
+    <ng-template let-product pTemplate="item">
+        <div class="product-item">
+            <div class="product-item-content">
+                <div class="p-mb-3">
+                    <app-video-player [videoId]="UrlVideo(product.url)" style="width: 40%; height: 30%;"></app-video-player>
+                </div>
+                <div>
+                    <h3 class="p-mb-1">{{product.title}}</h3>
+                    <div class="car-buttons p-mt-5">
+                        <p-button id="info" label="ดูรายละเอียด" icon="pi pi-search" styleClass="p-button-rounded"></p-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</p-carousel>

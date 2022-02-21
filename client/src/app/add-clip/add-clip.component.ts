@@ -5,20 +5,34 @@ import { TopMenuComponent } from '../top-menu/top-menu.component'
 @Component({
   selector: 'app-add-clip',
   templateUrl: './add-clip.component.html',
-  styleUrls: ['./add-clip.component.css']
+  styleUrls: ['./add-clip.component.css'],
 })
 export class AddClipComponent implements OnInit {
 
   title: string | undefined;
   uploader: string | undefined;
   description: string | undefined;
-  url: string | undefined;
-  rating: number = 0;
+  url: any;
+  rating: number = 1;
+
+  display: boolean = true;
 
 
-  constructor(private clipApiService:ClipApiService, private top:TopMenuComponent ) { }
+
+  constructor(private clipApiService:ClipApiService, private top:TopMenuComponent) { 
+  }
 
   ngOnInit(): void {
+
+    
+  }
+
+  resetAdd() {
+    this.title = "";
+    this.uploader = "";
+    this.description = "";
+    this.url = "";
+    this.rating = 1;
   }
 
   addClip(): void {
@@ -31,11 +45,22 @@ export class AddClipComponent implements OnInit {
       rating: this.rating,
     }
 
-    this.top.hideBasicDialog()
+    this.top.hideBasicDialog();
+
+    
     
     this.clipApiService.addClip(val).subscribe(res => {
-      alert(res.toString());
+      if(res == 1) {
+        this.top.showSuccess();
+        this.resetAdd();
+      } else {
+        this.top.showWarn();
+        this.resetAdd();
+      }
+    
     });
+
+    
   }
 
 }

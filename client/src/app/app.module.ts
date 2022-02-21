@@ -38,6 +38,12 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
 import {RatingModule} from 'primeng/rating';
 import { ClipsComponent } from './clips/clips.component';
 
+import {ToastModule} from 'primeng/toast';
+
+import {YouTubePlayerModule} from '@angular/youtube-player';
+import { VideoPlayerComponent } from './video-player/video-player.component';
+
+
 
 
 @NgModule({
@@ -47,7 +53,8 @@ import { ClipsComponent } from './clips/clips.component';
     TopMenuComponent,
     SliderComponent,
     AddClipComponent,
-    ClipsComponent
+    ClipsComponent,
+    VideoPlayerComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +71,9 @@ import { ClipsComponent } from './clips/clips.component';
     BrowserAnimationsModule,
     FormsModule,
     InputTextareaModule,
-    RatingModule
+    RatingModule,
+    ToastModule,
+    YouTubePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
