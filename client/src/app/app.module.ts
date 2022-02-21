@@ -37,6 +37,11 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
 
 import {RatingModule} from 'primeng/rating';
 
+import {ToastModule} from 'primeng/toast';
+
+
+
+
 
 
 @NgModule({
@@ -62,7 +67,8 @@ import {RatingModule} from 'primeng/rating';
     BrowserAnimationsModule,
     FormsModule,
     InputTextareaModule,
-    RatingModule
+    RatingModule,
+    ToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]

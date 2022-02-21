@@ -1,3 +1,4 @@
+<!-- <iframe [src]='safeURL' frameborder="0" allowfullscreen></iframe> -->
 <br>
 <br>
 <div class="p-fluid grid">
@@ -31,6 +32,8 @@
 </div>
 <p>ความนิยม: {{rating}}/5</p>
 <p-rating [(ngModel)]="rating" [cancel]="false"></p-rating>
+<br>
 
-
-<p-button icon="pi pi-check" (click)="addClip()" label="ตกลง" styleClass="p-button-text"></p-button>
+<div style="float:right">
+    <p-button icon="pi pi-check" (click)="addClip()" label="ตกลง" styleClass="p-button-text"></p-button>
+</div>
