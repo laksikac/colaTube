@@ -3,6 +3,7 @@ import { ClipApiService } from '../clip-api.service';
 import { LazyLoadEvent, SelectItem } from "primeng/api";
 
 
+
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
@@ -17,10 +18,10 @@ export class SliderComponent implements OnInit {
   getClips(): void {
       this.clipApiService.getClips()
       .subscribe(clips => this.clips = clips)
-  }  
-  
+  }
 
-  constructor(private clipApiService:ClipApiService) { 
+
+  constructor(private clipApiService:ClipApiService) {
     this.responsiveOptions = [
       {
           breakpoint: '1024px',
@@ -39,17 +40,17 @@ export class SliderComponent implements OnInit {
       }
   ];
 
-  
+
   }
 
-  
+
 
   ngOnInit(): void {
 
     this.getClips();
   }
 
-  
+
   UrlVideo(video: string) {
     const params = new URL(video).searchParams;
     video  = params.get('v')|| '{}';

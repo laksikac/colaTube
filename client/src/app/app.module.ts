@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {AccordionModule} from 'primeng/accordion'; 
+import {AccordionModule} from 'primeng/accordion';
 
 import {ButtonModule} from 'primeng/button';
 
@@ -36,11 +36,13 @@ import { AddClipComponent } from './add-clip/add-clip.component';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 
 import {RatingModule} from 'primeng/rating';
+import { ClipsComponent } from './clips/clips.component';
 
 import {ToastModule} from 'primeng/toast';
 
 import {YouTubePlayerModule} from '@angular/youtube-player';
 import { VideoPlayerComponent } from './video-player/video-player.component';
+import { DetailClipComponent } from './detail-clip/detail-clip.component';
 
 import {SidebarModule} from 'primeng/sidebar';
 import { HomeComponent } from './home/home.component';
@@ -58,7 +60,9 @@ import { HomeComponent } from './home/home.component';
     SliderComponent,
     AddClipComponent,
     VideoPlayerComponent,
-    HomeComponent
+    HomeComponent,
+    ClipsComponent,
+    DetailClipComponent
   ],
   imports: [
     BrowserModule,
