@@ -15,10 +15,9 @@ export class SliderComponent implements OnInit {
 
   responsiveOptions: any;
 
-  getClips(): void {
-      this.clipApiService.getClips()
-      .subscribe(clips => this.clips = clips)
-  }
+  displayBasic: boolean = false;
+
+
 
 
   constructor(private clipApiService:ClipApiService) {
@@ -55,6 +54,21 @@ export class SliderComponent implements OnInit {
     const params = new URL(video).searchParams;
     video  = params.get('v')|| '{}';
     return video;
+  }
+
+  showBasicDialog() {
+    this.displayBasic = true;
+  }
+
+  hideBasicDialog() {
+    this.displayBasic = false;
+  }
+
+
+
+  getClips(): void {
+    this.clipApiService.getClips()
+    .subscribe(clips => this.clips = clips)
   }
 
 
