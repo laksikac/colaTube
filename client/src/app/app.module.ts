@@ -42,6 +42,7 @@ import {ToastModule} from 'primeng/toast';
 
 import {YouTubePlayerModule} from '@angular/youtube-player';
 import { VideoPlayerComponent } from './video-player/video-player.component';
+import { DetailClipComponent } from './detail-clip/detail-clip.component';
 
 
 
@@ -54,7 +55,8 @@ import { VideoPlayerComponent } from './video-player/video-player.component';
     SliderComponent,
     AddClipComponent,
     ClipsComponent,
-    VideoPlayerComponent
+    VideoPlayerComponent,
+    DetailClipComponent
   ],
   imports: [
     BrowserModule,

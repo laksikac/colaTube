@@ -59,4 +59,14 @@ export class SliderComponent implements OnInit {
     return video;
   }
 
+  displayBasic: boolean = false;
+
+  showBasicDialog() {
+    this.displayBasic = true;
+  }
+
+  hideBasicDialog() {
+    this.displayBasic = false;
+  }
+
 }
