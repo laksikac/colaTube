@@ -42,6 +42,11 @@ import {ToastModule} from 'primeng/toast';
 import {YouTubePlayerModule} from '@angular/youtube-player';
 import { VideoPlayerComponent } from './video-player/video-player.component';
 
+import {SidebarModule} from 'primeng/sidebar';
+import { HomeComponent } from './home/home.component';
+
+// import {SkeletonModule} from 'primeng/skeleton';
+
 
 
 
@@ -52,7 +57,8 @@ import { VideoPlayerComponent } from './video-player/video-player.component';
     TopMenuComponent,
     SliderComponent,
     AddClipComponent,
-    VideoPlayerComponent
+    VideoPlayerComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +77,9 @@ import { VideoPlayerComponent } from './video-player/video-player.component';
     InputTextareaModule,
     RatingModule,
     ToastModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    // SkeletonModule,
+    SidebarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ClipApiService } from '../clip-api.service';
+import { LazyLoadEvent, SelectItem } from "primeng/api";
 
 
 @Component({
@@ -16,10 +17,7 @@ export class SliderComponent implements OnInit {
   getClips(): void {
       this.clipApiService.getClips()
       .subscribe(clips => this.clips = clips)
-  }
-
-  test:string = "hello";
-  
+  }  
   
 
   constructor(private clipApiService:ClipApiService) { 
@@ -57,5 +55,6 @@ export class SliderComponent implements OnInit {
     video  = params.get('v')|| '{}';
     return video;
   }
+
 
 }

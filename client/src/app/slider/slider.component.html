@@ -1,4 +1,4 @@
-<p-carousel [value]="clips" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
+<p-carousel [value]="clips" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions">
     <ng-template pTemplate="header">
         <h1>คลิปแนะนำ</h1>
     </ng-template>
@@ -10,6 +10,8 @@
                 </div>
                 <div>
                     <h3 class="p-mb-1">{{product.title}}</h3>
+                    <p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating>
+                    <br>
                     <div class="car-buttons p-mt-5">
                         <p-button id="info" label="ดูรายละเอียด" icon="pi pi-search" styleClass="p-button-rounded"></p-button>
                     </div>

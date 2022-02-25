@@ -1686,7 +1686,7 @@ p-radiobutton.ng-dirty.ng-invalid>.p-radiobutton>.p-radiobutton-box {
 .p-rating .p-rating-icon:focus {
     outline: 0 none;
     outline-offset: 0;
-    box-shadow: 0 0 0 0.2rem #ffe69c;
+    box-shadow: 0 0 0 0.2rem transparent;
 }
 
 .p-rating .p-rating-icon:first-child {

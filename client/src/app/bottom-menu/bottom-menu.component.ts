@@ -23,7 +23,8 @@ export class BottomMenuComponent implements OnInit {
                   positionLeft: 18,
                   showDelay: 500,
               },
-                icon: "https://img.icons8.com/windows/344/home.png"
+                icon: "https://img.icons8.com/windows/344/home.png",
+                routerLink: "/home"
             },
             {
                 label: 'Profile',
@@ -34,7 +35,7 @@ export class BottomMenuComponent implements OnInit {
                   positionLeft: 18,
                   showDelay: 500
               },
-                icon: "https://img.icons8.com/windows/344/contacts.png"
+                icon: "https://img.icons8.com/windows/344/contacts.png",
             },
             {
                 label: 'Friends',

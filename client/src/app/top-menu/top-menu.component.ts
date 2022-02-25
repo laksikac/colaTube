@@ -11,6 +11,8 @@ import {MessageService} from 'primeng/api';
 })
 export class TopMenuComponent implements OnInit {
 
+  display:boolean = false;
+
   items: MenuItem[] = [];
 
   displayBasic: boolean = false;
