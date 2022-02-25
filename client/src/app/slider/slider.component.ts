@@ -12,6 +12,8 @@ export class SliderComponent implements OnInit {
 
   clips: any[] = [];
 
+  id: number = 0;
+
   responsiveOptions: any;
 
   getClips(): void {
@@ -61,7 +63,10 @@ export class SliderComponent implements OnInit {
 
   displayBasic: boolean = false;
 
-  showBasicDialog() {
+  showBasicDialog(id : string) {
+    console.log(id);
+    var test = Number(id);
+    this.id = test;
     this.displayBasic = true;
   }
 
