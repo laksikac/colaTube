@@ -4,6 +4,9 @@ import { LazyLoadEvent, SelectItem } from "primeng/api";
 
 
 
+
+
+
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
@@ -13,12 +16,11 @@ export class SliderComponent implements OnInit {
 
   clips: any[] = [];
 
-  id: number = 0;
-
   responsiveOptions: any;
 
   displayBasic: boolean = false;
 
+  clip: any;
 
 
 
@@ -58,13 +60,14 @@ export class SliderComponent implements OnInit {
     return video;
   }
 
-  displayBasic: boolean = false;
 
-  showBasicDialog(id : string) {
-    console.log(id);
-    var test = Number(id);
-    this.id = test;
+  showDetail(id: number) {
     this.displayBasic = true;
+    for ( const clip of this.clips) {
+      if(clip.id == id) {
+        this.clip = clip;
+      }
+    }
   }
 
   hideBasicDialog() {
@@ -77,6 +80,7 @@ export class SliderComponent implements OnInit {
     this.clipApiService.getClips()
     .subscribe(clips => this.clips = clips)
   }
+
 
 
 }

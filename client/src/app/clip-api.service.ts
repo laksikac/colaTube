@@ -4,6 +4,7 @@ import { Observable, of } from 'rxjs';
 
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -20,7 +21,7 @@ export class ClipApiService {
     return this.http.get<any>(url);
   }
 
- 
+
   updateClip(val: any): Observable<any> {
     return this.http.put(this.clipsUrl,val);
   }
@@ -40,6 +41,8 @@ export class ClipApiService {
     }
     return this.http.get<any[]>(`${this.searchclipsUrl}search/?_key=${term}`);
   }
-  
+
+
+
   constructor( private http: HttpClient ) { }
 }
