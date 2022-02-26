@@ -11,7 +11,7 @@ import { SliderComponent } from '../slider/slider.component';
 })
 export class DetailClipComponent implements OnInit {
   clip: any;
-  @Input() Id?: number;
+  @Input() Id?: any;
 
   constructor(private clip_api_service : ClipApiService, 
               private route : ActivatedRoute,
@@ -22,9 +22,11 @@ export class DetailClipComponent implements OnInit {
   }
 
   getClip(): void{
+    console.log(this.Id);
     this.clip_api_service.getClip(this.slide.id)
     .subscribe(clip => this.clip = clip);
   }
+  
 
 
 }

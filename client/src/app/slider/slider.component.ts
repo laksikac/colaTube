@@ -63,7 +63,7 @@ export class SliderComponent implements OnInit {
 
   displayBasic: boolean = false;
 
-  showBasicDialog(id : string) {
+  showBasicDialog(id : Number) {
     console.log(id);
     var test = Number(id);
     this.id = test;
