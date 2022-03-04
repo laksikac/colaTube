@@ -1,0 +1,14 @@
+<div>
+    <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <input type="text" pKeyFilter="alphanum" pInputText placeholder="ค้นหา" (input)="search(searchBox.value)"/>
+    </span>
+
+    <ul class="search-result">
+        <li *ngFor="let clip of clips$ | async" >
+          <a routerLink="/detail/{{clip.id}}">
+            {{clip.title}}
+          </a>
+        </li>
+    </ul>
+</div>

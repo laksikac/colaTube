@@ -46,6 +46,7 @@ import { DetailClipComponent } from './detail-clip/detail-clip.component';
 
 import {SidebarModule} from 'primeng/sidebar';
 import { HomeComponent } from './home/home.component';
+import { SearchClipComponent } from './search-clip/search-clip.component';
 
 // import {SkeletonModule} from 'primeng/skeleton';
 
@@ -62,7 +63,8 @@ import { HomeComponent } from './home/home.component';
     VideoPlayerComponent,
     HomeComponent,
     ClipsComponent,
-    DetailClipComponent
+    DetailClipComponent,
+    SearchClipComponent
   ],
   imports: [
     BrowserModule,
