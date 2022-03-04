@@ -22,6 +22,8 @@ export class SliderComponent implements OnInit {
 
   clip: any;
 
+  id:number = 0;
+
 
 
   constructor(private clipApiService:ClipApiService) {
@@ -43,7 +45,6 @@ export class SliderComponent implements OnInit {
       }
   ];
 
-
   }
 
 
@@ -63,11 +64,7 @@ export class SliderComponent implements OnInit {
 
   showDetail(id: number) {
     this.displayBasic = true;
-    for ( const clip of this.clips) {
-      if(clip.id == id) {
-        this.clip = clip;
-      }
-    }
+    this.id = id;
   }
 
   hideBasicDialog() {

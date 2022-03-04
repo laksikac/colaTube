@@ -39,7 +39,7 @@ export class ClipApiService {
     if (!term.trim()) {
       return of([]);
     }
-    return this.http.get<any[]>(`${this.searchclipsUrl}search/?_key=${term}`);
+    return this.http.get<any[]>(`${this.searchclipsUrl}?search=${term}`);
   }
 
 
