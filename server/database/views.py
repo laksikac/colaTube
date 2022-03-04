@@ -49,3 +49,7 @@ def ClipApi(request,id=0):
             clip=Clip.objects.get(id=id)
             clip.delete()
             return JsonResponse("ลบสำเร็จ!!", safe=False)
+
+def search_by_tag(request, tag):
+articles_with_tag = Clip.objects.filter(tags__name__in=[tag])
+return render(request, 'article/tags.html', {'articles_with_tag': articles_with_tag})

@@ -15,4 +15,5 @@ urlpatterns = [
     path('', include(router.urls)),
     re_path(r'^clip/$',views.ClipApi),
     re_path(r'^clip/([0-9]+)$',views.ClipApi),
+    re_path(r'^tag/(?P<tag>[a-zA-Z]+)/$', views.search_by_tag, name='searchtag'),
 ]
