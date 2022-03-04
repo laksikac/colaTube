@@ -10,6 +10,7 @@ class ClipAdmin(admin.ModelAdmin):
         ('description',        {'fields': ['description']}),
         ('rating',             {'fields': ['rating']}),
         ('url',      {'fields': ['url']}),
+        ('tags',      {'fields': ['tags']}),
         # ('date',      {'fields': ['date']}),
     ]
 

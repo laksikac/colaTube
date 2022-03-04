@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'django_filters',
     'database.apps.DatabaseConfig',
+    'django.contrib.humanize',
+    'taggit',
 ]
 
 MIDDLEWARE = [
@@ -115,7 +117,7 @@ TIME_ZONE = 'Asia/Bangkok'
 USE_I18N = True
 
 USE_TZ = True
-
+TAGGIT_CASE_INSENSITIVE = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
