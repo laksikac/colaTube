@@ -1,6 +1,7 @@
-import { Component,  OnInit } from '@angular/core';
+import { Component,  Input,  OnInit } from '@angular/core';
 
 import { ClipApiService } from '../clip-api.service';
+
 
 
 
@@ -11,10 +12,27 @@ import { ClipApiService } from '../clip-api.service';
 })
 export class DetailClipComponent implements OnInit {
 
-  constructor(private clip_api_service : ClipApiService) { }
+  @Input() id?:number;
+
+  clip:any;
+
+
+  constructor(private clip_api_service : ClipApiService ) { }
 
   ngOnInit(): void {
 
+  }
+
+  ngOnChanges() {
+    if(this.id) {
+      this.getCilp(this.id);
+    }
+  }
+
+  getCilp(id: number):void {
+    this.clip_api_service.getClip(id).subscribe(
+      clip => this.clip = clip
+    )
   }
 
 

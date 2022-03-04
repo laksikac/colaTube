@@ -23,12 +23,14 @@
 </p-carousel>
 
 <p-dialog header="รายละเอียดคลิป" [(visible)]="displayBasic" [modal]="true" [style]="{width: '50vw'}" [draggable]="false" [resizable]="false">
-    <div *ngIf="clip">
+    <app-detail-clip [id]="id"></app-detail-clip>
+
+    <!-- <div *ngIf="clip">
         <p>ชื่อคลิป : {{clip.title}}</p>
         <p>ชื่อผู้อัพโหลด : {{clip.uploader}}</p>
         <p>คำบรรยาย : {{clip.description}}</p>
         <p>วันที่อัพโหลด : {{clip.date}}</p>
         <span> ความนิยม :</span>
         <p-rating [ngModel]="clip.rating" [readonly]="true" [cancel]="false"></p-rating>
-    </div>
+    </div> -->
 </p-dialog>
