@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ClipApiService } from '../clip-api.service';
+import { LazyLoadEvent, SelectItem } from "primeng/api";
+
+
+
 
 
 
@@ -12,20 +16,15 @@ export class SliderComponent implements OnInit {
 
   clips: any[] = [];
 
-  id: number = 0;
-
   responsiveOptions: any;
 
-  getClips(): void {
-      this.clipApiService.getClips()
-      .subscribe(clips => this.clips = clips)
-  }
+  displayBasic: boolean = false;
 
-  test:string = "hello";
-  
-  
+  clip: any;
 
-  constructor(private clipApiService:ClipApiService) { 
+
+
+  constructor(private clipApiService:ClipApiService) {
     this.responsiveOptions = [
       {
           breakpoint: '1024px',
@@ -44,34 +43,44 @@ export class SliderComponent implements OnInit {
       }
   ];
 
-  
+
   }
 
-  
+
 
   ngOnInit(): void {
 
     this.getClips();
   }
 
-  
+
   UrlVideo(video: string) {
     const params = new URL(video).searchParams;
     video  = params.get('v')|| '{}';
     return video;
   }
 
-  displayBasic: boolean = false;
 
-  showBasicDialog(id : Number) {
-    console.log(id);
-    var test = Number(id);
-    this.id = test;
+  showDetail(id: number) {
     this.displayBasic = true;
+    for ( const clip of this.clips) {
+      if(clip.id == id) {
+        this.clip = clip;
+      }
+    }
   }
 
   hideBasicDialog() {
     this.displayBasic = false;
   }
+
+
+
+  getClips(): void {
+    this.clipApiService.getClips()
+    .subscribe(clips => this.clips = clips)
+  }
+
+
 
 }

@@ -19,12 +19,12 @@ export class AddClipComponent implements OnInit {
 
 
 
-  constructor(private clipApiService:ClipApiService, private top:TopMenuComponent) { 
+  constructor(private clipApiService:ClipApiService, private top:TopMenuComponent) {
   }
 
   ngOnInit(): void {
 
-    
+
   }
 
   resetAdd() {
@@ -36,7 +36,7 @@ export class AddClipComponent implements OnInit {
   }
 
   addClip(): void {
-    
+
     var val = {
       title: this.title,
       uploader: this.uploader,
@@ -47,19 +47,19 @@ export class AddClipComponent implements OnInit {
 
     this.top.hideBasicDialog();
 
-    
-    
+
+
     this.clipApiService.addClip(val).subscribe(res => {
       if(res == 1) {
-        this.resetAdd();
         this.top.showSuccess();
+        window.location.reload();
       } else {
         this.top.showWarn();
       }
-    
+
     });
 
-    
+
   }
 
 }

@@ -1,8 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component,  OnInit } from '@angular/core';
 
 import { ClipApiService } from '../clip-api.service';
-import { ActivatedRoute } from '@angular/router';
-import { SliderComponent } from '../slider/slider.component';
+
+
 
 @Component({
   selector: 'app-detail-clip',
@@ -10,21 +10,23 @@ import { SliderComponent } from '../slider/slider.component';
   styleUrls: ['./detail-clip.component.css']
 })
 export class DetailClipComponent implements OnInit {
+<<<<<<< HEAD
   clip: any;
   @Input() Id?: any;
+=======
+>>>>>>> a8ada4521248d6cc689bb0ed2b6543116e23afbc
 
-  constructor(private clip_api_service : ClipApiService, 
-              private route : ActivatedRoute,
-              private slide : SliderComponent) { }
+  constructor(private clip_api_service : ClipApiService) { }
 
   ngOnInit(): void {
-    this.getClip();
-  }
 
+<<<<<<< HEAD
   getClip(): void{
     console.log(this.Id);
     this.clip_api_service.getClip(this.slide.id)
     .subscribe(clip => this.clip = clip);
+=======
+>>>>>>> a8ada4521248d6cc689bb0ed2b6543116e23afbc
   }
   
 
