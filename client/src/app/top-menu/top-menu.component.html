@@ -8,7 +8,8 @@
             <input type="text" pInputText placeholder="ค้นหา" />
         </span> &nbsp;
         <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" (click)="showBasicDialog()" pTooltip="เพิ่มคลิป" tooltipPosition="bottom"></button> &nbsp;
-        <button pButton pRipple type="button" icon="pi pi-user" class="p-button-rounded p-button-info p-button-text" pTooltip="โปรไฟล์" tooltipPosition="bottom"></button>
+        <button pButton pRipple type="button" icon="pi pi-user" class="p-button-rounded p-button-info p-button-text" pTooltip="โปรไฟล์" tooltipPosition="bottom"></button>&nbsp;
+        <button pButton pRipple type="button" icon="pi pi-ellipsis-h" (click)="display = true" class="p-button-rounded p-button-text p-button-plain" pTooltip="เพิ่มเติม" tooltipPosition="bottom"></button>
     </ng-template>
 </p-menubar>
 
@@ -19,3 +20,7 @@
 </p-dialog>
 
 <p-toast></p-toast>
+
+<p-sidebar [(visible)]="display" position="bottom" [style]="{height:'17%'}" [baseZIndex]=" 10000 ">
+    <app-bottom-menu></app-bottom-menu>
+</p-sidebar>
